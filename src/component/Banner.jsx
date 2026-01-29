@@ -1,8 +1,8 @@
-import React from 'react'
 
+import Bed from "../assets/items/bed.png"
 export default function Banner() {
   return (
-    <div>
+    <div className="flex">
       <div>
         <img src="" alt="" />
       </div>
@@ -21,7 +21,7 @@ export default function Banner() {
           <p></p>
         </div>
         <div>
-          <button></button>
+          <img src={Bed} alt="" className="h-40 w-40"/>
         </div>
       </div>
         
