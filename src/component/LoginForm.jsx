@@ -1,30 +1,27 @@
-// import React from 'react'
-// import { useState } from 'react'
-// function LoginForm() {
-// const [email,setEmail]=useState("");
-// const [password,setPassword]=useState("");
-// const handleSubmit=()=>{
-//     console.log("you have login successfully",email,password);
-// }
+import React from 'react'
+import { useState } from 'react'
+function LoginForm() {
+    const [email,setEmail]=useState("");
+    const [password, setPassword]= useState("")
 
+    function handleClick(e){
+        e.preventDefault()
+        console.log("submitted",email,password)
+    }
+  return (
+    <div>
+        <form onSubmit={handleClick}>
+            <label htmlFor='email'>Email</label>
+            <input type="email" id='email' value={email} placeholder='enter your email' onChange={(e)=>setEmail(e.target.value)} />
+            <label htmlFor='"password'>Password</label>
+            <input type='text' id='password' value={password} placeholder='enter your password' onChange={(e)=>setPassword(e.target.value)}/>
 
-//   return (
-//     <div>
-//         <form onSubmit={handleSubmit}>
-//             <label htmlFor="email">Email</label>
-//             <input type= "email" id="email" value={email} onChange={(e)=>setEmail(e.target.value)} />
-//             <label htmlFor="password">Password</label>
-//             <input type= "password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
-           
+<button type='submit'> submit</button>
+
+        </form>
       
+    </div>
+  )
+}
 
-        
-        
-//         </form>
-//         <button type="submit">Login </button>
-      
-//     </div>
-//   )
-// }
-
-// export default LoginForm
+export default LoginForm
